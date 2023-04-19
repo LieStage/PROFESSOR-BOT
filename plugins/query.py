@@ -244,7 +244,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f"{files.file_name}"    
         try:                  
             if AUTH_CHANNEL and not await is_subscribed(client, query):
-                return await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+                return await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start={ident}_{file_id}")
             else:
                 await client.send_cached_media(
                     chat_id=query.from_user.id,
@@ -278,10 +278,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f"{files.file_name}"        
         try:
             if AUTH_CHANNEL and not await is_subscribed(client, query):
-                await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+                await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start={ident}_{file_id}")
                 return
             elif settings['botpm']:
-                await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+                await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start={ident}_{file_id}")
                 return
             else:
                 await client.send_cached_media(
@@ -294,9 +294,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         except UserIsBlocked:
             await query.answer('Unblock the bot mahn !', show_alert=True)
         except PeerIdInvalid:
-            await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+            await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start={ident}_{file_id}")
         except Exception as e:
-            await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+            await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start={ident}_{file_id}")
       
     if query.data.startswith("allfile"):
         ident, req, key, offset = query.data.split("_")
@@ -365,7 +365,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{files.file_name}"        
             try:
                 if AUTH_CHANNEL and not await is_subscribed(client, query):
-                    return await query.answer(url=f"https://t.me/{temp.U_NAME}?start=file_{file_id}")
+                    return await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
                    
                 else:
                     try:
@@ -604,8 +604,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton("➕️ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕️", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
             ],[
-            InlineKeyboardButton("🔍 𝚂𝙴𝙰𝚁𝙲𝙷 🔍", switch_inline_query_current_chat=''), 
-            InlineKeyboardButton("📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂 📢", url="https://t.me/mkn_bots_updates")
+            InlineKeyboardButton("𝐓𝐫𝐮𝐦𝐁𝐨𝐭🏆", switch_inline_query_current_chat=''), 
+            InlineKeyboardButton("📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂 📢", url="https://t.me/movie_time_botonly/478")
             ],[
             InlineKeyboardButton("ℹ️ 𝙷𝙴𝙻𝙿 ℹ️", callback_data="help"),
             InlineKeyboardButton("💫 𝙰𝙱𝙾𝚄𝚃 💫", callback_data="about")
